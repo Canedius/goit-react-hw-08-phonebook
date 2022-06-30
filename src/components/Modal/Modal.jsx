@@ -1,6 +1,7 @@
 import Form from 'components/Form/Form';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
 function ModalAddForm({onClose,open}) {
     const style = {
         position: 'absolute',
@@ -25,3 +26,8 @@ function ModalAddForm({onClose,open}) {
     
 }
 export default ModalAddForm
+ModalAddForm.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+    
+};

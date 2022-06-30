@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import { useFetchContactsQuery } from 'redux/contacts/contact-slice';

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useCreateContactMutation } from 'redux/contacts/contact-slice';
 import { useFetchContactsQuery } from 'redux/contacts/contact-slice';
 import { Box,TextField,Button } from '@mui/material';
@@ -86,3 +87,7 @@ export const Form = ({close}) => {
 
 
 export default Form;
+
+Form.propTypes = {
+  close: PropTypes.func,
+};

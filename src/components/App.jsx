@@ -1,14 +1,32 @@
-
+import { lazy, Suspense } from 'react';
 import {Routes, Route,} from "react-router-dom";
-import RegisterView from './Views/RegisterView';
-import LoginView from './Views/LoginView';
-import HeaderView from './Views/HeaderView';
-import ContactsView from './Views/ContactsView';
-import HomeView from './Views/HomeView';
+import Spinner from './Spinners/Spinners';
+
+
+const HomeView = lazy(() =>
+  import('./Views/HomeView' /* webpackChunkName: "home-view" */)
+);
+
+const RegisterView = lazy(() =>
+  import('./Views/RegisterView' /* webpackChunkName: "register-view" */)
+);
+
+const LoginView = lazy(() =>
+  import('./Views/LoginView' /* webpackChunkName: "login-view" */)
+);
+
+const HeaderView = lazy(() =>
+  import('./Views/HeaderView' /* webpackChunkName: " Header-view" */)
+);
+
+const ContactsView = lazy(() =>
+  import('./Views/ContactsView' /* webpackChunkName: "Contacts-view" */)
+);
 
 
  const App =()=>{
-    return (
+    return <>
+ <Suspense fallback={<Spinner/>}>
   <Routes>
     <Route path="/" element={<HeaderView/>}>
       <Route index element={<HomeView/>}/>
@@ -17,8 +35,6 @@ import HomeView from './Views/HomeView';
       <Route path="/contacts" element={<ContactsView/>}/>
     </Route>
   </Routes>
-    )
-  
-}
-
+</Suspense>
+    </>}
 export default App

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useFetchContactsQuery } from 'redux/contacts/contact-slice';
 import { Box,TextField,Button } from '@mui/material';
 import Notiflix from 'notiflix';
@@ -6,6 +7,7 @@ import { useEditContactMutation } from 'redux/contacts/contact-slice';
 
 function FormEdit({state,close}) {
 const {id, name, number} = state
+
   const [defaultName, setDefaultName] = useState(name);
   const [defaultNumber, setDefaultNumber] = useState(number);
   const{data} = useFetchContactsQuery()
@@ -81,4 +83,8 @@ const {id, name, number} = state
     
 }
 
+
 export default FormEdit
+FormEdit.propTypes = {
+  close: PropTypes.func.isRequired,
+};

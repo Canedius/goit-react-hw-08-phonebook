@@ -1,4 +1,4 @@
-import s from "../Form/Form.module.css"
+import s from "./RegForm.module.css"
 import { useState } from 'react';
 import Container from '@mui/material/Container';
 import { useCreateUserMutation } from "redux/Users/users-slice";
@@ -40,7 +40,7 @@ const reset = () => {
           <form className={s.form}  onSubmit={handleSubmit}>
           <h2 >Registration page</h2>
               <TextField
-                className={s.input}
+                
                 onChange={handelNameChange}
                 value={name}
                 label="Name"
@@ -49,7 +49,7 @@ const reset = () => {
                 sx={{ width: 500,mb:2}}
               />
               <TextField
-                className={s.input}
+                
                 onChange={handelEmailChange}
                 value={email}
                 type="email"
@@ -58,7 +58,7 @@ const reset = () => {
                 sx={{ width: 500,mb:2}}
               />
               <TextField
-                className={s.input}
+                
                 onChange={handelPasswordChange}
                 label="Password"
                 value={password}

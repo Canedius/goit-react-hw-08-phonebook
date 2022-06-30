@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import {NavLink,} from "react-router-dom"
 import s from "./HomePage.module.css"
 import { ReactComponent as SolarImage } from '../images/solar.svg';
-function HomePage(params) {
+function HomePage() {
     return <Container maxWidth="xl">
     <Box sx={{ textAlign:"center"}}>
         <Typography 
