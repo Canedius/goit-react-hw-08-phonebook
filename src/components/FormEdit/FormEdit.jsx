@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useCreateContactMutation } from 'redux/contacts/contact-slice';
 import { useFetchContactsQuery } from 'redux/contacts/contact-slice';
 import { Box,TextField,Button } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
 import Notiflix from 'notiflix';
 import { useEditContactMutation } from 'redux/contacts/contact-slice';
 

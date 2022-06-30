@@ -1,10 +1,5 @@
-import Form from './Form/Form'
-import ContactList from './Contacts/Contacts'
-import Filter from './Filter/Filter'
-import s from './Form/Form.module.css';
-import ReactDOM from "react-dom/client";
+
 import {Routes, Route,} from "react-router-dom";
-import Navigation from './Navigation/Navigation';
 import RegisterView from './Views/RegisterView';
 import LoginView from './Views/LoginView';
 import HeaderView from './Views/HeaderView';
