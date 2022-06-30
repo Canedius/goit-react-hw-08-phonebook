@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import { useFetchContactsQuery } from 'redux/contacts/contact-slice';
@@ -15,6 +16,7 @@ import Badge from '@mui/material/Badge';
 import { Typography } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import { useState } from 'react';
+
 import FormEdit from 'components/FormEdit/FormEdit';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function Contacts({ children }) {

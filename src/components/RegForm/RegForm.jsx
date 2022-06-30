@@ -7,7 +7,7 @@ import Notiflix from 'notiflix';
 
 
 export function RegForm() {
-  const [createUser ] = useCreateUserMutation()
+  const [createUser, ] = useCreateUserMutation()
 
 const [name, setName] = useState('');
 const [email, setEmail] = useState('');
@@ -64,7 +64,7 @@ const reset = () => {
                 value={password}
                 type="Password"
                 name="number"
-                
+                required
                 sx={{ width: 500,mb:2}}
                 helperText={password.length<8 && password.length>0? "Your password must include a minimum of eight characters" : "" }
                 error={password.length<8 && password.length>0?true : false}

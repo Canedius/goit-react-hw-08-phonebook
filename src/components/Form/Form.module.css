@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 10px;
+}
+.input {
+  display: block;
+}
+.wrap {
+  padding: 10px;
+  width: 300px;
+}
+.list {
+  width: 350px;
+  padding: 0;
+}
+.item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
