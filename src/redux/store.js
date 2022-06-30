@@ -20,7 +20,7 @@ const contactsPersistConfig = {
   blacklist: ['filter'],
 };
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     contacts: persistReducer(contactsPersistConfig, contactReducer),
     [contactsApi.reducerPath]: contactsApi.reducer,
@@ -34,6 +34,4 @@ const store = configureStore({
     }).concat(contactsApi.middleware),
   devTools: process.env.NODE_ENV === 'development',
 });
-const persistor = persistStore(store);
-
-export default { store, persistor };
+export const persistor = persistStore(store);
